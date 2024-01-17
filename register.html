@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Corleone - Login</title>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">CorleoneFashion.<strong>store</strong></a>
+
+            <div class="search-container">
+                <form action="/search" method="GET">
+                  <input type="text" name="query" >
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div> 
+
+            <div class="cart-icon">
+                <span id="cart-icon">
+                    <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                    <span id="cart-count">0</span>
+                </span>
+            </div>   
+
+            <nav class="navigation">
+                <button class="btnLogin-popup"><a href="login.html"><strong>Aanmelden</strong></a></button>
+            </nav>
+    </header>     
+    <main>                       
+        <div class="login-box1">
+                    
+            <h1>Registreren</h1>
+            
+            <form class="textbox" action="work.php">
+                <input type="text" placeholder="Voornaam" name="firstName" value="">
+            </form>
+            <br>
+            <form class="textbox" action="work.php">
+                <input type="text" placeholder="Achternaam" name="lastName" value="">
+            </form>
+            <br>
+            <form class="textbox" action="work.php">
+                <input type="text" placeholder="Email" name="email" value="">
+            </form>
+            <br>
+            <form class="textbox" action="work.php">
+                <input type="password" placeholder="Kies Wachtwoord" name="password" value="">
+            </form>
+            <br>  
+            <form class="textbox" action="work.php">
+                <input type="password" placeholder="Bevestig Wachtwoord" name="password" value="">
+            </form>
+            <br>
+            <input class="btn" type="button" name="" value="Registreren">
+
+            <p class="lowercase">Al een account? <a href="login.html"><button type="button" class="button"><span>Inloggen</span></button></a></p> 
+        
+        </div>  
+    </main>
+    <script src="main.js"></script>
+
+</body>
+</html>

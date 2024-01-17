@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Corleone - Login</title>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">CorleoneFashion.<strong>store</strong></a>
+
+            <div class="search-container">
+                <form action="/search" method="GET">
+                  <input type="text" name="query" >
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div> 
+
+            <div class="cart-icon">
+                <span id="cart-icon">
+                    <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                    <span id="cart-count">0</span>
+                </span>
+            </div>   
+
+            <nav class="navigation">
+                <button class="btnLogin-popup"><a href="login.html"><strong>Aanmelden</strong></a></button>
+            </nav>
+    </header>     
+    <main>                       
+        <div class="login-box">
+            <h1>Inloggen</h1>
+            <div class="textbox">
+                <input type="text" placeholder="Gebruikersnaam" name="" value="">
+        </div>
+                
+        <div class="textbox">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Wachtwoord" name="" value="">
+            </div>
+                                    
+            <input class="btn" type="button" name="" value="Inloggen"> 
+            <p class="lowercase">Nog geen account? <a href="register.html"><button type="button" class="button"><span>Registreren</span></button></a></p> 
+        </div>            
+    </main>
+    <script src="main.js"></script>
+    <footer>
+        
+    </footer>
+
+</body>
+</html>

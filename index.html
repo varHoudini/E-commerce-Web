@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="php" href="work.php">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Corleone</title>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">CorleoneFashion.<strong>store</strong></a>
+
+            <div class="search-container">
+                <form action="/search" method="GET">
+                  <input type="text" name="query" placeholder="Zoek hier...">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div> 
+
+            <div class="dropdown">
+                <span>Informatie?</span>
+                <div class="dropdown-content">
+                  <p>Klik op het product voor meer informatie</p>
+                </div>
+              </div>
+
+            <div class="cart-icon">
+                <span id="cart-icon">
+                    <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                    <span id="cart-count">0</span>
+                </span>
+            </div>   
+
+            <nav class="navigation">
+                <button class="btnLogin-popup"><a href="login.html"><strong>Aanmelden</strong></a></button>
+            </nav>
+
+            <div class="cart">
+                  <h2 class="cart-title">Jouw winkelwagen</h2>
+ 
+                  <div class="cart-content"></div>
+
+                  <div class="total">
+                    <div class="total-title">Totaal</div>
+                    <div class="total-price">€0</div>
+                  </div>
+
+                  <button type="button" class="btn-buy">Bestel Nu</button>
+
+                  <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+
+    </header>  
+
+   <main>
+    <section class="shop container">
+        
+        <div class="product-filters">
+            <ul>
+              <li><a href="#" class="active">Alle producten</a></li>
+              <li><a href="#">Nieuw</a></li>
+              <li><a href="#">Populair</a></li>
+              <li><a href="#">Sale</a></li>
+              <li><a href="#">Filter&nbsp;
+                <select>
+                <option>Prijs van hoog naar laag</option>
+                <option>Prijs van laag naar hoog</option>
+                <option>Sorteren op merk</option>
+              </select></a></li>
+            </ul>
+        </div> 
+
+        <h2>BAGS, CLOTHES AND ACCESORIES</h2>
+
+        <div class="shop-content">
+            
+            <div class="product-box" data-name="p-1"> 
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-shopper-bag-mm-other-leathers-for-men--M24457_PM2_Front%20view.png?wid=1090&hei=1090" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Mini Soft Trunk</h2>
+                <span class="price">€99.95</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            
+            <div class="product-box" data-name="p-2">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-trio-messenger-monogram-eclipse-canvas-bags--M69443_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Trio Messenger Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            
+            <div class="product-box" data-name="p-3">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-handle-soft-trunk-bag-monogram-macassar-canvas-bags--M46264_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Handle Soft Trunk Bag</h2>
+                <span class="price">€99.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-4">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-duo-messenger-bag-monogram-shadow-leather-bags--M69827_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Duo Messenger Bag</h2>
+                <span class="price">€89.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-5">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH069/9Z2F0S73/2VH069_9Z2_F0S73_V_YMI_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Medium Prada Brique Saffiano Leather Bag</h2>
+                <span class="price">€109.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-6">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VD/2VD034/2DMHF0244/2VD034_2DMH_F0244_V_XOP_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Small Prada Brique Leather Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-7">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH160/2DMHF0002/2VH160_2DMH_F0002_V_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Re-Nylon and Saffiano Leather Shoulder Bag</h2>
+                <span class="price">€169.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-8">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH152/2FADF0002/2VH152_2FAD_F0002_V_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Prada Saffiano Leather Shoulder Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-9">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-mini-soft-trunk-other-leathers-bags--M20557_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Mini Soft Trunk</h2>
+                <span class="price">€99.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            
+            <div class="product-box" data-name="p-10">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-trio-messenger-monogram-eclipse-canvas-bags--M69443_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Trio Messenger Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            
+            <div class="product-box" data-name="p-11">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-handle-soft-trunk-bag-monogram-macassar-canvas-bags--M46264_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Handle Soft Trunk Bag</h2>
+                <span class="price">€99.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-12">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-duo-messenger-bag-monogram-shadow-leather-bags--M69827_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Duo Messenger Bag</h2>
+                <span class="price">€89.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-13">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH069/9Z2F0S73/2VH069_9Z2_F0S73_V_YMI_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Medium Prada Brique Saffiano Leather Bag</h2>
+                <span class="price">€109.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-14">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VD/2VD034/2DMHF0244/2VD034_2DMH_F0244_V_XOP_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Small Prada Brique Leather Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-15">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH160/2DMHF0002/2VH160_2DMH_F0002_V_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Re-Nylon and Saffiano Leather Shoulder Bag</h2>
+                <span class="price">€169.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-16">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH152/2FADF0002/2VH152_2FAD_F0002_V_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Prada Saffiano Leather Shoulder Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-17">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-mini-soft-trunk-other-leathers-bags--M20557_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Mini Soft Trunk</h2>
+                <span class="price">€99.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            
+            <div class="product-box" data-name="p-18">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-trio-messenger-monogram-eclipse-canvas-bags--M69443_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Trio Messenger Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            
+            <div class="product-box" data-name="p-19">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-handle-soft-trunk-bag-monogram-macassar-canvas-bags--M46264_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Handle Soft Trunk Bag</h2>
+                <span class="price">€99.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-20">
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-duo-messenger-bag-monogram-shadow-leather-bags--M69827_PM2_Front%20view.png?wid=1240&hei=1240" alt="" class="product-img">
+                <h2 class="product-title">Louis Vuitton Duo Messenger Bag</h2>
+                <span class="price">€89.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-21">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH069/9Z2F0S73/2VH069_9Z2_F0S73_V_YMI_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Medium Prada Brique Saffiano Leather Bag</h2>
+                <span class="price">€109.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-22">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VD/2VD034/2DMHF0244/2VD034_2DMH_F0244_V_XOP_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Small Prada Brique Leather Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-23">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH160/2DMHF0002/2VH160_2DMH_F0002_V_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Re-Nylon and Saffiano Leather Shoulder Bag</h2>
+                <span class="price">€169.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+
+            <div class="product-box" data-name="p-24">
+                <img src="https://www.prada.com/content/dam/pradabkg_products/2/2VH/2VH152/2FADF0002/2VH152_2FAD_F0002_V_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg" alt="" class="product-img">
+                <h2 class="product-title">Prada Saffiano Leather Shoulder Bag</h2>
+                <span class="price">€129.95</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+        </div>  
+        
+        <!-- POP UP HTML -->
+        <div class="products-preview">
+
+            <div class="preview" data-target="p-1">
+                <i class='bx bx-x'></i>
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-mini-soft-trunk-other-leathers-bags--M20557_PM2_Front%20view.png?wid=1240&hei=1240" alt="">
+                <h3>Louis Vuitton Mini Soft Trunk</h3>
+                <!-- RATING STERREN -->
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                    <i class='bx bx-star'></i>
+                    <span>( 32 )</span>
+                </div>
+                <!-- PRIJS EN BESCHRIJVING -->
+                <p>Zeer nette tas met genoeg vak ruimtes!</p>
+                <div class="price">€99.95</div>
+            </div>
+
+            <div class="preview" data-target="p-2">
+                <i class='bx bx-x'></i>
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-trio-messenger-monogram-eclipse-canvas-bags--M69443_PM2_Front%20view.png?wid=1240&hei=1240" alt="">
+                <h3>Louis Vuitton Trio Messenger Bag</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                    <span>( 48 )</span>
+                </div>
+                <p>Grote tas die met een extra tas komt voor biljetten en een klein tasje voor je munten of pasjes.</p>
+                <div class="price">€129.95</div>
+            </div>
+
+            <div class="preview" data-target="p-3">
+                <i class='bx bx-x'></i>
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-handle-soft-trunk-bag-monogram-macassar-canvas-bags--M46264_PM2_Front%20view.png?wid=1240&hei=1240" alt="">
+                <h3>Louis Vuitton Handle Soft Trunk Bag</h3>
+                <!-- RATING STERREN -->
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                    <i class='bx bx-star'></i>
+                    <span>( 28 )</span>
+                </div>
+                <!-- PRIJS EN BESCHRIJVING -->
+                <p>Lelijke tas voor een groene biljet</p>
+                <div class="price">€99.95</div>
+            </div>
+
+            <div class="preview" data-target="p-4">
+                <i class='bx bx-x'></i>
+                <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-duo-messenger-bag-monogram-shadow-leather-bags--M69827_PM2_Front%20view.png?wid=1240&hei=1240" alt="">
+                <h3>Louis Vuitton Duo Messenger Bag</h3>
+                <!-- RATING STERREN -->
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <span>( 87 )</span>
+                </div>
+                <!-- PRIJS EN BESCHRIJVING -->
+                <p>Zieke tas voor degelijke prijs. WEES SNEL!</p>
+                <div class="price">€89.95</div>
+            </div>
+
+            <div class="preview" data-target="p-">
+                <i class='bx bx-x'></i>
+                <img src="" alt="">
+                <h3></h3>
+                <!-- RATING STERREN -->
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                    <i class='bx bx-star'></i>
+                    <span>(  )</span>
+                </div>
+                <!-- PRIJS EN BESCHRIJVING -->
+                <p></p>
+                <div class="price">€</div>
+            </div>
+
+            <div class="preview" data-target="p-">
+                <i class='bx bx-x'></i>
+                <img src="" alt="">
+                <h3></h3>
+                <!-- RATING STERREN -->
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                    <i class='bx bx-star'></i>
+                    <span>(  )</span>
+                </div>
+                <!-- PRIJS EN BESCHRIJVING -->
+                <p></p>
+                <div class="price">€</div>
+            </div>
+
+
+        
+        </div>
+
+        <div class="product-navigation">
+            <button class="prev">Vorige</button>
+            <button class="next">Volgende</button>
+          </div>
+          
+    </section>
+   </main>
+    <script src="main.js"></script>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-row">
+            <div class="footer-col">
+              <h3>Over Ons</h3>
+              <p>CorleoneFashion.Store is een online winkel die zich richt op designer tassen van de hoogste kwaliteit. Ons doel is om onze klanten de beste service te bieden en hun winkelervaring zo prettig mogelijk te maken.</p>
+            </div>
+            <div class="footer-col">
+              <h3>Contact</h3>
+              <ul>
+                <li><i class='bx bx-map'></i> Adres: Fashionstraat 1, 1234 AT Weert</li>
+                <li><i class='bx bx-phone'></i> Telefoon: +31 6 12345678</li>
+                <li><i class='bx bx-envelope'></i> Email: info@corleonefashion.store</li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Volg Ons</h3>
+              <div class="social-links">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/corleone_official.be/"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <p class="copy">© 2023 CorleoneFashion.Store. Alle rechten voorbehouden.</p>
+        </div>
+      </footer>
+      
+    
+</body>
+</html>
